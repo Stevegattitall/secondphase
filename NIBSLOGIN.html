@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>login page</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Science+Gothic:wght@100..900&display=swap" rel="stylesheet">
+        <style>
+            input::placeholder{
+                color:red;
+                font-size: 1.2em;
+                font-style: italic;
+            }
+            body{
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: linear-gradient(135deg,rgb(32, 113, 225),rgb(85, 73, 3));
+                overflow: hidden;
+            }
+            .row1{
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+            .nibslogo{
+                width:80px;
+                height:100px;
+            }
+            .Nibsheading1{
+                font-family: "Science Gothic", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: bold;
+                font-style: normal;
+                font-size: 50px;
+                color: rgb(5, 98, 247);
+                margin-bottom: 0px;
+                margin-top: 0px;
+                font-variation-settings:
+                    "slnt" 0,
+                    "wdth" 100,
+                    "CTRS" 0;
+            }
+            .Nibsheading2{
+                font-family: "Science Gothic", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: bold;
+                font-style: normal;
+                font-size: 30px;
+                color: red;
+                margin-top: 0px;
+                margin-bottom: 0px;
+                font-variation-settings:
+                    "slnt" 0,
+                    "wdth" 100,
+                    "CTRS" 0;
+            }
+            .maincontainer{
+                position:relative;
+                display: block;
+                height: 30%;
+                width: 90%;
+                padding: 40px;
+                backdrop-filter: blur;
+                justify-content: center;
+                align-items: center;
+                background: rgba(255,255,255,0.1);
+                border-radius: 30px;
+                box-shadow: 5px 5px 5px rgba(255,255,255,0.01), -5px -5px 5px rgba(255,255,255,0.01);
+            }
+            .email_container,.password_container{
+                width: 300px;
+                height: 30px;
+                border-radius: 10px;
+                align-items: center;
+                justify-content: center;
+            }
+            .emailsrc,.passwordsrc{
+                width: 300px;
+                height: 28px;
+                background: rgba(116, 115, 115, 0.1);
+                border-radius: 20px;
+                padding-left: 10px;
+                border:none;
+                box-shadow: 5px 5px 5px rgba(255,255,255,0.1),-5px -5px 5px rgba(255,255,255,0.1);
+                font: 10px;
+                font-weight: bold;
+            }
+            .password_container{
+                margin-top: 10px;
+                height: 30px;                
+            }
+            
+            .cookies{
+                margin-top: 15px;
+            }
+            .loginbut{
+                width: 50px;
+                height: 30px;
+            }
+            .login{
+                width: 60px;
+                height: 30px;
+                background-color: blue;
+                border: none;
+                border-radius: 20px;
+                cursor: pointer;
+                color: red;
+                font-weight: bold;
+            }
+            .login{
+                transition: all 0.3s ease-in-out;
+            }
+            .login:hover{
+                transform: scale(1.05) rotate(15deg) translate(0px, -10px) skewX(0deg);
+                box-shadow: 0 20px 25px rgba(0, 0, 0, 0.3);
+                opacity: 1;
+                filter: brightness(1.1);
+                background-color: #667eea;
+                color: #ffffff;
+                
+            }
+            .reachout{
+                display: flex;
+                width: 100%;
+                flex-direction: row;
+                position: relative;
+                height:30%;
+                margin-top: 30px;
+                margin-left: 80px;
+                gap: 30px;
+                
+            }
+            .instagram,.tiktok,.twitter,.youtube{
+                width: 60px;
+                height: 60px;
+                border-radius: 16px;
+            }
+            .IGlogo,.tiktoklogo,.xlogo,.youtubelogo{
+                width: 60px;
+                height: 60px;
+                border-radius: 14px;
+                transition:all 0.3s ease-in-out;
+                cursor: pointer;
+            }
+            .IGlogo:hover{
+                transform: scale(1.25) rotate(5deg) translate(0px, -10px) skewX(0deg);
+                box-shadow: 0 20px 25px rgba(0, 0, 0, 0.3);
+            }
+            
+            .tiktoklogo:hover{
+                transform: scale(1.25) rotate(5deg) translate(0px, -10px) skewX(0deg);
+                box-shadow: 0 20px 25px rgba(0, 0, 0, 0.3);
+            }
+            
+            .xlogo:hover{
+                transform: scale(1.25) rotate(5deg) translate(0px, -10px) skewX(0deg);
+                box-shadow: 0 20px 25px rgba(0, 0, 0, 0.3);
+            }
+            
+            .youtubelogo:hover{
+                transform: scale(1.25) rotate(5deg) translate(0px, -10px) skewX(0deg);
+                box-shadow: 0 20px 25px rgba(0, 0, 0, 0.3);
+            }
+            
+
+        </style>
+        
+    </head>
+    <body>
+        <div class="allcontent">
+            <div class="row1">
+                <div class="logoposition">
+                    <img class="nibslogo" src="nibs3.png" alt="nibslogo">
+                </div>
+                <div class="Title">
+                    <p class="Nibsheading1">NIBS</p>
+                    <P class="Nibsheading2">TECHNICAL COLLEGE</P>
+                </div>
+            </div>
+            
+            <div class="maincontainer">
+                <div class="email_container">
+                    <input type="text" placeholder="email" class="emailsrc" required>
+                </div>
+                <div class="password_container">
+                    <input type="password" placeholder="password" class="passwordsrc" required>
+                </div>
+                <div class="cookies">
+                    <label><input type="checkbox">Remember me</label>
+                    <a href="">Forgot password</a>
+                </div>
+                <div class="loginbut">
+                    <button class="login" >Login</button>
+                </div>
+                <div class="register">
+                    Don't have an account yet?
+                    <a target="_blank" href="https://admissions.nibs.ac.ke/">Signup</a>
+                </div>
+            </div>
+            <div class="reachout">
+                <div class="instagram">
+                    <a target="_blank" href="https://www.instagram.com/nibstechnicalcollege/">
+                        <img src="instagramlogo.jpeg" alt="instagramlogo" class="IGlogo">
+                    </a>                    
+                </div>
+                <div class="tiktok">
+                    <a target="_blank" href="https://www.tiktok.com/@nibstechnicalcollege">
+                        <img src="tiktok.png" alt="tiktoklogo" class="tiktoklogo" >
+                    </a>
+                </div>
+                <div class="twitter">
+                    <a target="_blank" href="https://x.com/NIBSCollege">
+                        <img src="xlogo.jpeg" alt="xlog" class="xlogo">
+                    </a>                    
+                </div>
+                <div class="youtube">
+                    <a target="_blank" href="https://www.youtube.com/@nibstechnicalcollegeofficial">
+                        <img src="youtubelogo.jpeg" alt="youtubelogo" class="youtubelogo">
+                    </a>                    
+                </div>
+            </div>
+        </div>
+        
+    </body>
+</html>
